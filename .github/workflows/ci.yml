@@ -1,21 +1,11 @@
-# This workflow runs on every push to this repository
 name: CI for todolist-api
 
 on:
   push:
 
-# In your main project's workflow file
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: submodule/actions/sync@v1
-        with:
-          # Path to the shared repository
-          submodule: 'https://github.com/todolist-micro-services/pipeline'
-          # Path to the pipeline config file within the shared repository
-          branch: 'master'
-          path: 'server/unitTest.yml'
-      - run: |
-          cat server/unitTest.yml
+      - uses: https://github.com/todolist-micro-services/pipeline/blob/master/server/unitTest.yml
