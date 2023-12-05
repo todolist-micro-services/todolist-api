@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: todolist-micro-services/pipeline@master/blob/master/server/unitTest.yml
+      - uses: todolist-micro-services/pipeline@master/server/unitTest.yml
