@@ -7,5 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: todolist-micro-services/pipeline@master/server/unitTest.yml
+      - uses: actions/trigger-workflow@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repo: todolist-micro-services/pipeline
+          workflow: pipeline-workflow
+          inputs: server/unitTest.yml
