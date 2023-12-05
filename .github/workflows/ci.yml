@@ -18,5 +18,4 @@ jobs:
           branch: 'master'
           path: 'server/unitTest.yml'
       - run: |
-        # Use the referenced pipeline config file
-        cat server/unitTest.yml
+          cat server/unitTest.yml
